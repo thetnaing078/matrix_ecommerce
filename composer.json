@@ -71,21 +71,7 @@
             "Analytics"
         ]
     },
-    "scripts": {
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ],
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "Google\\Task\\Composer::cleanup"
-        ]
-    },
+    
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
